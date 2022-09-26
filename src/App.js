@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Login from "./components/Login";
+import Todo from "./components/Todo";
+import Settings from "./components/Settings";
+// import authContext from './components/Context';
+import{BrowserRouter as Router ,Routes,Route} from 'react-router-dom'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <authContext.Provider value={isAuth}>
+    <Router>
+      <Routes>
+      <Route path='/' element={<Login/>}  />
+      <Route path='/todo' element={<Todo/>} />
+      <Route path='/settings' element={<Settings user={'admin'}/>} />
+
+      </Routes>
+      </Router>
+      // </authContext.Provider>
   );
 }
-
 export default App;
