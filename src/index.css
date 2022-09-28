@@ -7,7 +7,102 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+table{
+  position: absolute;
+  /* top: 50%; right: 50%;
+  transform: translate(50%,-50%); */
+  left:50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  border-collapse: collapse;
+  cursor: pointer;
+}
+tr:nth-child(odd){
+  background-color: darkgray;
+}
+tr:nth-child(even){
+  background-color: burlywood;
+}
+tr:hover{
+  font-size: 2rem;
+  background-color: #d64c7f;
+  color: white;
+}
+.input-box{
+  padding: 2%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  /* position: absolute;
+  top: 50%; right: 50%;
+  transform: translate(50%,-50%); */
+  margin: 2rem auto;
+  width: 50%;
+  display: flex;
+  border-radius: 4px;
+  flex-direction: column;
+  background: linear-gradient(to right, #ad5389, #3c1053);
+}
+input{
+  height: 40px;
+  margin: 2rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+
+}
+button{
+  font-size: 1.2rem;
+  margin: 0 auto;
+  width: 50%;
+  padding: 2%;
+  text-align: center;
+  background: linear-gradient(25deg,#d64c7f,#ee4758 50%);
+   color: white;
+   cursor: pointer;
+}
+.nav-btn{
+  width: unset;
+  padding: 5%;
+  font-size: 2rem;
+}
+.nav-btn:hover{
+  transform: scale(1.1);
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  padding: 1%;
+  background-color: #d64c7f;
+  font-weight: 800;
+  align-items: center;
+
+}
+a{
+  margin: 2rem;
+  color: white;
+   text-decoration: none;
+}
+.task{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.title,span{
+  font-size: 2.5rem;
+  color: #ad5389;
+}
+.left {
+  width: 48%;
+  padding: 2%;
+}
+
+.left img{
+  width: 100%;
 }
